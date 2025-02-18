@@ -10,6 +10,8 @@ public class Treino {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
+        
+        private String nome;
         private String exercicio1;
         private String exercicio2;
         private String exercicio3;
