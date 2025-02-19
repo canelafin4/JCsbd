@@ -6,14 +6,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.jcsbd.jcsbd.model.Treino;
+import com.jcsbd.jcsbd.repository.TreinoRepository;
 
 @RestController
 @RequestMapping("treino")
 public class TreinoController {
     
+    private TreinoRepository treinoRepository;
+
+    public TreinoController (TreinoRepository treinoRepository){
+        this.treinoRepository = treinoRepository;
+    }
+
     @PostMapping
     public Treino save(@RequestBody Treino treino){
-        System.out.println("exercicios do treino: "+ treino);
-        return treino;
+        return treinoRepository.save(treino);
     }
 }
