@@ -14,11 +14,4 @@ public abstract class Exercicio {
     private String nome;
     private int series;
 
-    public Exercicio() {}
-
-    public Exercicio(String nome, int series) {
-        this.nome = nome;
-        this.series = series;
-    }
-
 }
