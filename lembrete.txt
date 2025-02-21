@@ -1,0 +1,4 @@
+//anotações sobre o projeto
+
+Quando falamos de Powerlift ou Powerbuilding temos que saber diferenciar um treinamento com foco em exercícios primarios que é formado por três exercícios o agachamento(squat), o supino reto com barra(bench) e o levantemento terra(deadlift). De um treino com exercícios compostos, conhecidos como exercícios acessórios, que servem para dar suporte direto ao treinamento primário contanto com uma infinidade de variações.
+Neste programa os exercícios serão salvos em um banco de dados local e serão dividios conforme suas caracteristicas únicas. O método que utilizei foi o Joined onde a tabela principal armazena os dados gerais que todo exercício tem (nome, tipos e séries) e duas tabelas que são geradas das classes filhas de Exercico que são Ex principais contendo o campo RM que é a medida usada para exercícios SBD e ExAcessorios contendo o campo repetições que é a medida usada para esse tipo de exercício.
