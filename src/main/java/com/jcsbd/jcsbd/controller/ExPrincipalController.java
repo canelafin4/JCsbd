@@ -17,6 +17,11 @@ public class ExPrincipalController {
 
     @PostMapping
     public ExPrincipal save(@RequestBody ExPrincipal exPrincipal){
-        return exPrincipalRepository.save(exPrincipal);
+        if(exPrincipal.getNome().equals("supino")  || exPrincipal.getNome().equals("agachamento") || exPrincipal.getNome().equals("levantamento")){
+            return exPrincipalRepository.save(exPrincipal);
+        }else{
+            return exPrincipal;
+        }
+ 
     }
 }

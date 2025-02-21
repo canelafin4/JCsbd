@@ -9,4 +9,9 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = true)
 public class ExPrincipal extends Exercicio {
     private int rm; //Séries dos exercicios principais (sbd) são medidos por RM (reps maximas)
+
+    @Override
+    public String getNome() {
+        return super.getNome().toLowerCase();
+    }
 }
