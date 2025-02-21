@@ -4,8 +4,8 @@ import lombok.Data;
 
 @Entity
 @Data
+@Inheritance(strategy = InheritanceType.JOINED)
 @Table(name = "Exercicio")
-
 public class Exercicio {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,3 +15,4 @@ public class Exercicio {
     private String tipo; //nota: ser for ExPrincipal as únicas opções à serem escolhidas serão o clássico SBD (squat, bench and deadlift)
     private int series;
 }
+ 
