@@ -1,5 +1,6 @@
 package com.jcsbd.jcsbd.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import com.jcsbd.jcsbd.model.ExPrincipal;
@@ -9,11 +10,8 @@ import com.jcsbd.jcsbd.repository.ExPrincipalRepository;
 @RequestMapping("exprincipal")
 public class ExPrincipalController {
     
+    @Autowired
     private ExPrincipalRepository exPrincipalRepository;
-
-    public ExPrincipalController(ExPrincipalRepository exPrincipalRepository){
-        this.exPrincipalRepository = exPrincipalRepository;
-    }
 
     @PostMapping
     public ExPrincipal save(@RequestBody ExPrincipal exPrincipal){
@@ -22,6 +20,7 @@ public class ExPrincipalController {
         }else{
             return exPrincipal;
         }
- 
     }
+ 
+
 }

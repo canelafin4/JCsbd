@@ -1,5 +1,6 @@
 package com.jcsbd.jcsbd.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import com.jcsbd.jcsbd.model.ExAcessorio;
@@ -9,11 +10,8 @@ import com.jcsbd.jcsbd.repository.ExAcessorioRepository;
 @RequestMapping("exacessorio")
 public class ExAcessorioController {
     
+    @Autowired
     private ExAcessorioRepository exAcessorioRepository;
-
-    public ExAcessorioController(ExAcessorioRepository exAcessorioRepository){
-        this.exAcessorioRepository = exAcessorioRepository;
-    }
 
     @PostMapping
     public ExAcessorio save(@RequestBody ExAcessorio exAcessorio){
