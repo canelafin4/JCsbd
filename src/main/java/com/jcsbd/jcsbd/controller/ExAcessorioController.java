@@ -15,6 +15,11 @@ public class ExAcessorioController {
 
     @PostMapping
     public ExAcessorio save(@RequestBody ExAcessorio exAcessorio){
-        return exAcessorioRepository.save(exAcessorio);
+        if(exAcessorio.getTipo().equals("acessorio")){
+            return exAcessorioRepository.save(exAcessorio);
+        }else{
+            System.out.println("O exercicio deve ser tipo Acessorio"); //100% para testes 
+        }
+        return exAcessorio;
     }
 }

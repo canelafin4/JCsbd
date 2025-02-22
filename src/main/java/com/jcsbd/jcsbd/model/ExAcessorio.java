@@ -9,4 +9,9 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = true)
 public class ExAcessorio extends Exercicio {
     private int repeticoes; //numero de reps usadas para medir exercicios acessórios
+
+    @Override
+    public String getTipo() {
+        return super.getTipo().toLowerCase();
+    }
 }
