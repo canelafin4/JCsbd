@@ -21,6 +21,11 @@ public class ExPrincipalController {
             return exPrincipal;
         }
     }
+
+    @GetMapping("/{id}")
+    public ExPrincipal findById(@PathVariable("id") Long id){
+        return exPrincipalRepository.findById(id).orElse(null);
+    }
  
 
 }
