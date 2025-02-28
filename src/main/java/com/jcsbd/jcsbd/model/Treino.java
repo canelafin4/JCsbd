@@ -17,7 +17,7 @@ public class Treino {
 
     @ManyToMany
     @JoinTable(
-        name = "treino_exercicio",
+        name = "treino_exercicio", //a tabela treino_exercicio é onde fica armazenado os id dos exercicios feitos no treino relacionado com o id do treino
         joinColumns = @JoinColumn(name = "treino_id"),
         inverseJoinColumns = @JoinColumn(name = "exercicio_id")
     )
